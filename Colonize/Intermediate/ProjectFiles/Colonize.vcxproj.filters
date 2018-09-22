@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\Colonize.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{653B87DE-10ED-4FDD-9B9E-39C921D59F64}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\Colonize.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\ColonizeEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{FEEF129C-4608-4C06-B45D-A2271BB2388C}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultGame.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\Colonize">
+			<UniqueIdentifier>{863A3FB8-B268-4723-8092-88FFC0B32750}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\Colonize\Colonize.Build.cs">
+			<Filter>Source\Colonize</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\Colonize\Colonize.cpp">
+			<Filter>Source\Colonize</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\Colonize\Colonize.h">
+			<Filter>Source\Colonize</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\Colonize\ColonizeGameModeBase.cpp">
+			<Filter>Source\Colonize</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\Colonize\ColonizeGameModeBase.h">
+			<Filter>Source\Colonize</Filter>
+		</ClInclude >
+	</ItemGroup>
+</Project>
