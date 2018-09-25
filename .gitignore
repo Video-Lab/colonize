@@ -1,8 +1,16 @@
+<<<<<<< HEAD
+Colonize/Binaries/*
+Colonize/Build/*
+Colonize/Intermediate/*
+Colonize/Saved/*
+Colonize/DerivedDataCache/*
+=======
 Colonize/Binaries/
 Colonize/Build/
 Colonize/Intermediate/
 Colonize/Saved/
 Colonize/DerivedDataCache/
+>>>>>>> 6a59dc9f863e6b58ce8a3f9449730938b60b6ba9
 *.VC.*
 *.VC
 .vs/
