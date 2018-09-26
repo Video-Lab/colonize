@@ -1,0 +1,3 @@
+F:\Folders\School\Personal Project\Colonize\Colonize\Source\Colonize\Colonize.Build.cs
+F:\Folders\School\Personal Project\Colonize\Colonize\Source\Colonize.Target.cs
+F:\Folders\School\Personal Project\Colonize\Colonize\Source\ColonizeEditor.Target.cs

@@ -1,8 +1,8 @@
-Colonize/Binaries/*
-Colonize/Build/*
-Colonize/Intermediate/*
-Colonize/Saved/*
-Colonize/DerivedDataCache/*
+./Colonize/Binaries/*
+./Colonize/Build/*
+./Colonize/Intermediate/*
+./Colonize/Saved/*
+./Colonize/DerivedDataCache/*
 *.VC.*
 *.VC
 .vs/
