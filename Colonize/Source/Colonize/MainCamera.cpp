@@ -1,3 +1,8 @@
+// TODO LIST:
+// Fix attaching camera to any component/position
+// Check for any other bugs
+
+
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "MainCamera.h"
@@ -12,13 +17,14 @@ AMainCamera::AMainCamera()
 	// Set up spring arm, mesh/pivot point, and camera as subobjects of pawn 
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
-	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
+	PivotPoint = CreateDefaultSubobject<USceneComponent>(TEXT("PivotPoint"));
 
+	//Variable setup
 	DefaultRotation = FRotator(-60.f, 0.f, 0.f);
 	Distance = 350.f;
 
 	// Set up spring arm positioning
-	SpringArm->AttachTo(RootComponent);
+	SpringArm->AttachTo(PivotPoint);
 	SpringArm->TargetArmLength = Distance;
 	SpringArm->SetWorldRotation(DefaultRotation);
 
@@ -44,12 +50,12 @@ void AMainCamera::Tick(float DeltaTime)
 
 	FRotator NewYaw = GetActorRotation();
 	NewYaw.Yaw += MouseInput.X;
-	SpringArm->SetWorldRotation(NewYaw);
+	SetActorRotation(NewYaw);
 
 	FRotator NewPitch = SpringArm->GetComponentRotation();
 
 	// Sets height boundaries to avoid the player bugging the camera by going past the limit
-	NewPitch.Pitch = FMath::Clamp(NewPitch.Pitch + MouseInput.Y, -180.f, 180.f);
+	NewPitch.Pitch = FMath::Clamp(NewPitch.Pitch + MouseInput.Y, -80.f, 0.f);
 
 	SpringArm->SetWorldRotation(NewPitch);
 

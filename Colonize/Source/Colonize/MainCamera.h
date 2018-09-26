@@ -45,7 +45,8 @@ public:
 	UCameraComponent* Camera;
 
 	// For pivot point
-	UStaticMeshComponent* Mesh; 
+	UPROPERTY(EditAnywhere)
+		USceneComponent* PivotPoint;
 
 	FVector2D MouseInput;
 	
