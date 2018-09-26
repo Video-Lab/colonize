@@ -6,6 +6,7 @@
 #include "Runtime/Engine/Classes/GameFramework/SpringArmComponent.h"
 #include "Runtime/Engine/Classes/Camera/CameraComponent.h"
 #include "Runtime/Engine/Classes/Components/SceneComponent.h"
+#include "Runtime/Engine/Classes/Components/InputComponent.h"
 #include "GameFramework/Pawn.h"
 #include "MainCamera.generated.h"
 

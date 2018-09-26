@@ -40,6 +40,19 @@ void AMainCamera::BeginPlay()
 // Called every frame
 void AMainCamera::Tick(float DeltaTime)
 {
+	// Where the new viewport is set every tick 
+
+	FRotator NewYaw = GetActorRotation();
+	NewYaw.Yaw += MouseInput.X;
+	SpringArm->SetWorldRotation(NewYaw);
+
+	FRotator NewPitch = SpringArm->GetComponentRotation();
+
+	// Sets height boundaries to avoid the player bugging the camera by going past the limit
+	NewPitch.Pitch = FMath::Clamp(NewPitch.Pitch + MouseInput.Y, -180.f, 180.f);
+
+	SpringArm->SetWorldRotation(NewPitch);
+
 	Super::Tick(DeltaTime);
 
 }
@@ -50,17 +63,19 @@ void AMainCamera::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
 	// Binds controls as specified in engine settings to function definitions in pawn class
-	InputComponent->BindAxis("LookUpDown", this, &AMainCamera::MousePitch)
-	InputComponent->BindAxis("LookLeftRight", this, &AMainCamera::MouseYaw)
+	PlayerInputComponent->BindAxis("LookUpDown", this, &AMainCamera::MousePitch);
+	PlayerInputComponent->BindAxis("LookLeftRight", this, &AMainCamera::MouseYaw);
 
 }
 
 void AMainCamera::MouseYaw(float value)
 {
+	MouseInput.Y = value; 
 
 }
 
 void AMainCamera::MousePitch(float value)
 {
+	MouseInput.X = value;
 }
 
