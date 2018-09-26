@@ -49,5 +49,18 @@ void AMainCamera::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+	// Binds controls as specified in engine settings to function definitions in pawn class
+	InputComponent->BindAxis("LookUpDown", this, &AMainCamera::MousePitch)
+	InputComponent->BindAxis("LookLeftRight", this, &AMainCamera::MouseYaw)
+
+}
+
+void AMainCamera::MouseYaw(float value)
+{
+
+}
+
+void AMainCamera::MousePitch(float value)
+{
 }
 

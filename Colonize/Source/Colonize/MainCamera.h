@@ -29,8 +29,8 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	void GetMouseYaw(float value);
-	void GetMousePitch(float value);
+	void MouseYaw(float value);
+	void MousePitch(float value);
 
 	UPROPERTY(EditAnywhere)
 		USpringArmComponent* SpringArm;
