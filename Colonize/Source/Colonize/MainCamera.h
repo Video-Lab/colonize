@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "Runtime/Engine/Classes/GameFramework/SpringArmComponent.h"
 #include "Runtime/Engine/Classes/Camera/CameraComponent.h"
+#include "Runtime/Engine/Classes/Components/SceneComponent.h"
 #include "GameFramework/Pawn.h"
 #include "MainCamera.generated.h"
 
@@ -33,6 +34,12 @@ public:
 
 	UPROPERTY(EditAnywhere)
 		USpringArmComponent* SpringArm;
+
+	UPROPERTY(EditAnywhere)
+		float Distance;
+
+	UPROPERTY(EditAnywhere)
+		FRotator DefaultRotation;
 
 	UCameraComponent* Camera;
 

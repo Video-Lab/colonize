@@ -14,6 +14,20 @@ AMainCamera::AMainCamera()
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
 	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 
+	DefaultRotation = FRotator(-60.f, 0.f, 0.f);
+	Distance = 350.f;
+
+	// Set up spring arm positioning
+	SpringArm->AttachTo(RootComponent);
+	SpringArm->TargetArmLength = Distance;
+	SpringArm->SetWorldRotation(DefaultRotation);
+
+	//Attaches camera to end of spring arm
+	Camera->AttachTo(SpringArm, USpringArmComponent::SocketName);
+
+	// Possess the main player
+	AutoPossessPlayer = EAutoReceiveInput::Player0;
+
 }
 
 // Called when the game starts or when spawned
