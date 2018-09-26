@@ -3,6 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Runtime/Engine/Classes/GameFramework/SpringArmComponent.h"
+#include "Runtime/Engine/Classes/Camera/CameraComponent.h"
 #include "GameFramework/Pawn.h"
 #include "MainCamera.generated.h"
 
@@ -26,6 +28,18 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	void GetMouseYaw(float value);
+	void GetMousePitch(float value);
+
+	UPROPERTY(EditAnywhere)
+		USpringArmComponent* SpringArm;
+
+	UCameraComponent* Camera;
+
+	// For pivot point
+	UStaticMeshComponent* Mesh; 
+
+	FVector2D MouseInput;
 	
 	
 };
