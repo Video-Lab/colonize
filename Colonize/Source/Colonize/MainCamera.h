@@ -46,7 +46,7 @@ public:
 
 	// For pivot point
 	UPROPERTY(EditAnywhere)
-		USceneComponent* PivotPoint;
+		UStaticMeshComponent* Mesh;
 
 	FVector2D MouseInput;
 	

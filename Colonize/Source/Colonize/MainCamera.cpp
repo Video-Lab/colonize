@@ -17,14 +17,14 @@ AMainCamera::AMainCamera()
 	// Set up spring arm, mesh/pivot point, and camera as subobjects of pawn 
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
-	PivotPoint = CreateDefaultSubobject<USceneComponent>(TEXT("PivotPoint"));
+	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 
 	//Variable setup
 	DefaultRotation = FRotator(-60.f, 0.f, 0.f);
 	Distance = 350.f;
 
 	// Set up spring arm positioning
-	SpringArm->AttachTo(PivotPoint);
+	SpringArm->AttachTo(RootComponent);
 	SpringArm->TargetArmLength = Distance;
 	SpringArm->SetWorldRotation(DefaultRotation);
 
@@ -55,7 +55,7 @@ void AMainCamera::Tick(float DeltaTime)
 	FRotator NewPitch = SpringArm->GetComponentRotation();
 
 	// Sets height boundaries to avoid the player bugging the camera by going past the limit
-	NewPitch.Pitch = FMath::Clamp(NewPitch.Pitch + MouseInput.Y, -80.f, 0.f);
+	NewPitch.Pitch += MouseInput.Y;
 
 	SpringArm->SetWorldRotation(NewPitch);
 
