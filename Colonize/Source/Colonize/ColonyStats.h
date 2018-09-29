@@ -11,11 +11,12 @@
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class COLONIZE_API UColonyStats : public UActorComponent
 {
+	
 	GENERATED_BODY()
 
 public:	
 	// Sets default values for this component's properties
-	UColonyStats(float, float, float, FString, float, FVector, int, float, float);
+	UColonyStats();
 
 protected:
 	// Called when the game starts
@@ -52,28 +53,28 @@ private:
 	float Position;
 
 	UPROPERTY(VisibleAnywhere)
-	float Level;
+		float Level = 1.f;
 
 	UPROPERTY(VisibleAnywhere)
-	float BaseOutput;
+		float BaseOutput = 10.f;
 
 	UPROPERTY(VisibleAnywhere)
-	FString Type;
+		FString Type = "normal";
 
 	UPROPERTY(VisibleAnywhere)
-	float Value;
+		float Value = 10.f;
 
 	UPROPERTY(VisibleAnywhere)
-	FVector Size;
+		FVector Size;
 
 	UPROPERTY(VisibleAnywhere)
-	int ItemCount;
+		int ItemCount = 1;
 
 	UPROPERTY(VisibleAnywhere)
-	float Credits;
+		float Credits = 10.f;
 
 	UPROPERTY(VisibleAnywhere)
-	float Marble;
+		float Marble = 0.f;
 
 
 };
