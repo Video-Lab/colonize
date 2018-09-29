@@ -25,6 +25,25 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
+	float GetPosition();
+	float SetPosition(float NewPosition);
+	float GetLevel();
+	float SetLevel(float NewLevel);
+	float GetBaseOutput();
+	float SetBaseOutput(float NewBaseOutput);
+	FString GetType();
+	FString SetType(FString NewType);
+	float GetValue();
+	float SetValue(float NewValue);
+	FVector GetSize();
+	FVector SetSize(float NewSize);
+	int GetItemCount();
+	int SetItemCount(float NewItemCount);
+	float GetCredits();
+	float SetCredits(float NewCredits);
+	float GetMarble();
+	float SetMarble(float NewMarble);
+
 private:
 	UPROPERTY(EditAnywhere)
 		AActor* Owner;
