@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Runtime/Engine/Classes/GameFramework/Actor.h"\
+#include "Runtime/Engine/Classes/GameFramework/Actor.h"
 #include "Components/ActorComponent.h"
 #include "ColonyStats.generated.h"
 
@@ -36,9 +36,9 @@ public:
 	float GetValue();
 	float SetValue(float NewValue);
 	FVector GetSize();
-	FVector SetSize(float NewSize);
+	FVector SetSize(FVector NewSize);
 	int GetItemCount();
-	int SetItemCount(float NewItemCount);
+	int SetItemCount(int NewItemCount);
 	float GetCredits();
 	float SetCredits(float NewCredits);
 	float GetMarble();
@@ -47,14 +47,33 @@ public:
 private:
 	UPROPERTY(EditAnywhere)
 		AActor* Owner;
-
+	
+	UPROPERTY(VisibleAnywhere)
 	float Position;
+
+	UPROPERTY(VisibleAnywhere)
 	float Level;
+
+	UPROPERTY(VisibleAnywhere)
 	float BaseOutput;
+
+	UPROPERTY(VisibleAnywhere)
 	FString Type;
+
+	UPROPERTY(VisibleAnywhere)
 	float Value;
+
+	UPROPERTY(VisibleAnywhere)
 	FVector Size;
+
+	UPROPERTY(VisibleAnywhere)
 	int ItemCount;
+
+	UPROPERTY(VisibleAnywhere)
 	float Credits;
+
+	UPROPERTY(VisibleAnywhere)
 	float Marble;
+
+
 };

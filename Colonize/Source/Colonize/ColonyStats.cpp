@@ -47,91 +47,100 @@ void UColonyStats::TickComponent(float DeltaTime, ELevelTick TickType, FActorCom
 
 float UColonyStats::GetPosition()
 {
-	return 0.0f;
+	return Position;
 }
 
 float UColonyStats::SetPosition(float NewPosition)
 {
-	return 0.0f;
+	Position = NewPosition;
+	return Position;
 }
 
 float UColonyStats::GetLevel()
 {
-	return 0.0f;
+	return Level;
 }
 
 float UColonyStats::SetLevel(float NewLevel)
 {
-	return 0.0f;
+	Level = NewLevel;
+	return Level;
 }
 
 float UColonyStats::GetBaseOutput()
 {
-	return 0.0f;
+	return BaseOutput;
 }
 
 float UColonyStats::SetBaseOutput(float NewBaseOutput)
 {
-	return 0.0f;
+	BaseOutput = NewBaseOutput;
+	return BaseOutput;
 }
 
 FString UColonyStats::GetType()
 {
-	return FString();
+	return Type;
 }
 
 FString UColonyStats::SetType(FString NewType)
 {
-	return FString();
+	Type = NewType;
+	return Type;
 }
 
 float UColonyStats::GetValue()
 {
-	return 0.0f;
+	return Value;
 }
 
 float UColonyStats::SetValue(float NewValue)
 {
-	return 0.0f;
+	Value = NewValue;
+	return Value;
 }
 
 FVector UColonyStats::GetSize()
 {
-	return FVector();
+	return Size;
 }
 
-FVector UColonyStats::SetSize(float NewSize)
+FVector UColonyStats::SetSize(FVector NewSize)
 {
-	return FVector();
+	Size = NewSize;
+	return Size;
 }
 
 int UColonyStats::GetItemCount()
 {
-	return 0;
+	return ItemCount;
 }
 
-int UColonyStats::SetItemCount(float NewItemCount)
+int UColonyStats::SetItemCount(int NewItemCount)
 {
-	return 0;
+	ItemCount = NewItemCount;
+	return ItemCount;
 }
 
 float UColonyStats::GetCredits()
 {
-	return 0.0f;
+	return Credits;
 }
 
 float UColonyStats::SetCredits(float NewCredits)
 {
-	return 0.0f;
+	Credits = NewCredits;
+	return Credits;
 }
 
 float UColonyStats::GetMarble()
 {
-	return 0.0f;
+	return Marble;
 }
 
 float UColonyStats::SetMarble(float NewMarble)
 {
-	return 0.0f;
+	Marble = NewMarble;
+	return Marble;
 }
 
