@@ -46,8 +46,6 @@ public:
 	float SetMarble(float NewMarble);
 
 private:
-	UPROPERTY(EditAnywhere)
-		AActor* Owner;
 	
 	UPROPERTY(VisibleAnywhere)
 	float Position;

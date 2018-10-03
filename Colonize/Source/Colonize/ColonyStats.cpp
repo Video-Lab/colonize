@@ -21,8 +21,6 @@ void UColonyStats::BeginPlay()
 {
 	Super::BeginPlay();
 
-	Owner = Owner->GetOwner();
-
 	// Set position & size of actor
 	
 }
