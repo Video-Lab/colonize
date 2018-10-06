@@ -26,23 +26,58 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
+	UFUNCTION(BlueprintCallable)
 	float GetPosition();
+
+	UFUNCTION(BlueprintCallable)
 	float SetPosition(float NewPosition);
+
+	UFUNCTION(BlueprintCallable)
 	float GetLevel();
+
+	UFUNCTION(BlueprintCallable)
 	float SetLevel(float NewLevel);
+
+	UFUNCTION(BlueprintCallable)
 	float GetBaseOutput();
+
+	UFUNCTION(BlueprintCallable)
 	float SetBaseOutput(float NewBaseOutput);
+
+	UFUNCTION(BlueprintCallable)
 	FString GetType();
+
+	UFUNCTION(BlueprintCallable)
 	FString SetType(FString NewType);
+
+	UFUNCTION(BlueprintCallable)
 	float GetValue();
+
+	UFUNCTION(BlueprintCallable)
 	float SetValue(float NewValue);
+
+	UFUNCTION(BlueprintCallable)
 	FVector GetSize();
+
+	UFUNCTION(BlueprintCallable)
 	FVector SetSize(FVector NewSize);
+
+	UFUNCTION(BlueprintCallable)
 	int GetItemCount();
+
+	UFUNCTION(BlueprintCallable)
 	int SetItemCount(int NewItemCount);
+
+	UFUNCTION(BlueprintCallable)
 	float GetCredits();
+
+	UFUNCTION(BlueprintCallable)
 	float SetCredits(float NewCredits);
+
+	UFUNCTION(BlueprintCallable)
 	float GetMarble();
+
+	UFUNCTION(BlueprintCallable)
 	float SetMarble(float NewMarble);
 
 private:
