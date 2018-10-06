@@ -1,5 +1,11 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
+// TODOS:
+// Create colonny blueprint structure
+// Adjust for colony creation 
+// Adjust for game save
+// Adjust for game load
+
 #pragma once
 
 #include "CoreMinimal.h"
