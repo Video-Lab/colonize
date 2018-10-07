@@ -77,20 +77,9 @@ public:
 	UFUNCTION(BlueprintCallable)
 	float SubtractTotalMarble(float Marble);
 
-
-	UFUNCTION(BlueprintCallable)
-	TArray<AActor*> GetColonyActors();
-
-	UFUNCTION(BlueprintCallable)
-	TArray<AActor*> AddColonyToTrack(AActor* Colony);
-
-	UFUNCTION(BlueprintCallable)
-	TArray<AActor*> DeleteColonyToTrack(AActor* Colony);
-
 private:
 	float Level;
 	float TotalPopulation;
 	float TotalCredits;
 	float TotalMarble;
-	TArray<AActor*> ColonyActors;	
 };

@@ -32,6 +32,12 @@ void UPlayerStats::TickComponent(float DeltaTime, ELevelTick TickType, FActorCom
 	// ...
 }
 
+struct Colony
+{
+	FTransform ColonyTransform;
+	float Test2;
+};
+
 float UPlayerStats::GetLevel()
 {
 	return Level;
@@ -112,27 +118,4 @@ float UPlayerStats::SubtractTotalMarble(float Marble)
 	return TotalMarble;
 }
 
-TArray<AActor*> UPlayerStats::GetColonyActors()
-{
-	return ColonyActors;
-}
-
-TArray<AActor*> UPlayerStats::AddColonyToTrack(AActor * Colony)
-{
-	ColonyActors.Add(Colony);
-	return ColonyActors;
-}
-
-TArray<AActor*> UPlayerStats::DeleteColonyToTrack(AActor * Colony)
-{
-	for (uint32 i = 0; i < ColonyActors.GetAllocatedSize(); i++)
-	{
-		if (ColonyActors[i] == Colony)
-		{
-			ColonyActors.Remove(Colony);
-		}
-	}
-
-	return ColonyActors;
-}
 
