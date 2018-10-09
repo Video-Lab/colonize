@@ -19,8 +19,8 @@ void EmptyLinkFunctionForGeneratedCodeColonize_init() {}
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/Colonize",
 				PKG_CompiledIn | 0x00000000,
-				0x5C33B0A9,
-				0x8C027E40,
+				0x69E3CA64,
+				0x1F6D5FD3,
 				nullptr, 0,
 				METADATA_PARAMS(nullptr, 0)
 			};

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\Colonize.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{23F2AB99-6AD5-487A-A296-256CA63A1F58}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\Colonize.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\ColonizeEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{94BA7D76-5423-4A4D-8BAC-46C8A91FA831}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultGame.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultInput.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\Colonize">
+			<UniqueIdentifier>{BFBD493A-7BDF-4EDD-B695-064309DB2F9E}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\Colonize\Colonize.Build.cs">
+			<Filter>Source\Colonize</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\Colonize\Colonize.cpp">
+			<Filter>Source\Colonize</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\Colonize\Colonize.h">
+			<Filter>Source\Colonize</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\Colonize\ColonizeGameModeBase.cpp">
+			<Filter>Source\Colonize</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\Colonize\ColonizeGameModeBase.h">
+			<Filter>Source\Colonize</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\Colonize\ColonyStats.cpp">
+			<Filter>Source\Colonize</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\Colonize\ColonyStats.h">
+			<Filter>Source\Colonize</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\Colonize\MainCamera.cpp">
+			<Filter>Source\Colonize</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\Colonize\MainCamera.h">
+			<Filter>Source\Colonize</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\Colonize\MainPawn.cpp">
+			<Filter>Source\Colonize</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\Colonize\MainPawn.h">
+			<Filter>Source\Colonize</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\Colonize\PlayerStats.cpp">
+			<Filter>Source\Colonize</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\Colonize\PlayerStats.h">
+			<Filter>Source\Colonize</Filter>
+		</ClInclude >
+	</ItemGroup>
+</Project>

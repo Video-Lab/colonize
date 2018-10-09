@@ -17,6 +17,9 @@ void EmptyLinkFunctionForGeneratedCodeMainCamera() {}
 	COLONIZE_API UClass* Z_Construct_UClass_AMainCamera();
 	ENGINE_API UClass* Z_Construct_UClass_APawn();
 	UPackage* Z_Construct_UPackage__Script_Colonize();
+	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
+	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 // End Cross Module References
 	void AMainCamera::StaticRegisterNativesAMainCamera()
 	{
@@ -41,6 +44,43 @@ void EmptyLinkFunctionForGeneratedCodeMainCamera() {}
 				{ "ModuleRelativePath", "MainCamera.h" },
 			};
 #endif
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Mesh_MetaData[] = {
+				{ "Category", "MainCamera" },
+				{ "EditInline", "true" },
+				{ "ModuleRelativePath", "MainCamera.h" },
+				{ "ToolTip", "For pivot point" },
+			};
+#endif
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Mesh = { UE4CodeGen_Private::EPropertyClass::Object, "Mesh", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000080009, 1, nullptr, STRUCT_OFFSET(AMainCamera, Mesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(NewProp_Mesh_MetaData, ARRAY_COUNT(NewProp_Mesh_MetaData)) };
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DefaultRotation_MetaData[] = {
+				{ "Category", "MainCamera" },
+				{ "ModuleRelativePath", "MainCamera.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FStructPropertyParams NewProp_DefaultRotation = { UE4CodeGen_Private::EPropertyClass::Struct, "DefaultRotation", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000001, 1, nullptr, STRUCT_OFFSET(AMainCamera, DefaultRotation), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(NewProp_DefaultRotation_MetaData, ARRAY_COUNT(NewProp_DefaultRotation_MetaData)) };
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Distance_MetaData[] = {
+				{ "Category", "MainCamera" },
+				{ "ModuleRelativePath", "MainCamera.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Distance = { UE4CodeGen_Private::EPropertyClass::Float, "Distance", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000001, 1, nullptr, STRUCT_OFFSET(AMainCamera, Distance), METADATA_PARAMS(NewProp_Distance_MetaData, ARRAY_COUNT(NewProp_Distance_MetaData)) };
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SpringArm_MetaData[] = {
+				{ "Category", "MainCamera" },
+				{ "EditInline", "true" },
+				{ "ModuleRelativePath", "MainCamera.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_SpringArm = { UE4CodeGen_Private::EPropertyClass::Object, "SpringArm", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000080009, 1, nullptr, STRUCT_OFFSET(AMainCamera, SpringArm), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(NewProp_SpringArm_MetaData, ARRAY_COUNT(NewProp_SpringArm_MetaData)) };
+			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Mesh,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_DefaultRotation,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Distance,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_SpringArm,
+			};
 			static const FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 				TCppClassTypeTraits<AMainCamera>::IsAbstract,
 			};
@@ -49,7 +89,7 @@ void EmptyLinkFunctionForGeneratedCodeMainCamera() {}
 				DependentSingletons, ARRAY_COUNT(DependentSingletons),
 				0x00900080u,
 				nullptr, 0,
-				nullptr, 0,
+				PropPointers, ARRAY_COUNT(PropPointers),
 				nullptr,
 				&StaticCppClassTypeInfo,
 				nullptr, 0,
@@ -59,7 +99,7 @@ void EmptyLinkFunctionForGeneratedCodeMainCamera() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMainCamera, 426023031);
+	IMPLEMENT_CLASS(AMainCamera, 1684484325);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AMainCamera(Z_Construct_UClass_AMainCamera, &AMainCamera::StaticClass, TEXT("/Script/Colonize"), TEXT("AMainCamera"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AMainCamera);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
