@@ -34,12 +34,12 @@ void UColonyStats::TickComponent(float DeltaTime, ELevelTick TickType, FActorCom
 	// ...
 }
 
-float UColonyStats::GetPosition()
+FVector UColonyStats::GetPosition()
 {
 	return Position;
 }
 
-float UColonyStats::SetPosition(float NewPosition)
+FVector UColonyStats::SetPosition(FVector NewPosition)
 {
 	Position = NewPosition;
 	return Position;

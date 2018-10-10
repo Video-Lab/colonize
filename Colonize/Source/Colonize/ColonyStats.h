@@ -27,10 +27,10 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	UFUNCTION(BlueprintCallable)
-	float GetPosition();
+	FVector GetPosition();
 
 	UFUNCTION(BlueprintCallable)
-	float SetPosition(float NewPosition);
+	FVector SetPosition(FVector NewPosition);
 
 	UFUNCTION(BlueprintCallable)
 	float GetLevel();
@@ -83,7 +83,7 @@ public:
 private:
 	
 	UPROPERTY(VisibleAnywhere)
-	float Position;
+	FVector Position;
 
 	UPROPERTY(VisibleAnywhere)
 		float Level = 1.f;
