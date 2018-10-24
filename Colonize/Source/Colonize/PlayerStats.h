@@ -78,7 +78,7 @@ public:
 	float SubtractTotalMarble(float Marble);
 
 private:
-	float Level = 1.f;
+	float Level = 1.0f;
 	float TotalPopulation;
 	float TotalCredits;
 	float TotalMarble;
