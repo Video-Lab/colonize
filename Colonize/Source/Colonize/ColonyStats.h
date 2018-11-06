@@ -33,12 +33,6 @@ public:
 	FVector SetPosition(FVector NewPosition);
 
 	UFUNCTION(BlueprintCallable)
-	float GetLevel();
-
-	UFUNCTION(BlueprintCallable)
-	float SetLevel(float NewLevel);
-
-	UFUNCTION(BlueprintCallable)
 	float GetBaseOutput();
 
 	UFUNCTION(BlueprintCallable)
@@ -55,12 +49,6 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	float SetValue(float NewValue);
-
-	UFUNCTION(BlueprintCallable)
-	FVector GetSize();
-
-	UFUNCTION(BlueprintCallable)
-	FVector SetSize(FVector NewSize);
 
 	UFUNCTION(BlueprintCallable)
 	int GetItemCount();
@@ -86,9 +74,6 @@ private:
 	FVector Position;
 
 	UPROPERTY(VisibleAnywhere)
-		float Level = 1.f;
-
-	UPROPERTY(VisibleAnywhere)
 		float BaseOutput = 10.f;
 
 	UPROPERTY(VisibleAnywhere)
@@ -96,9 +81,6 @@ private:
 
 	UPROPERTY(VisibleAnywhere)
 		float Value = 10.f;
-
-	UPROPERTY(VisibleAnywhere)
-		FVector Size;
 
 	UPROPERTY(VisibleAnywhere)
 		int ItemCount = 1;

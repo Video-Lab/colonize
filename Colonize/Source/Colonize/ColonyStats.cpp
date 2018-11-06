@@ -45,17 +45,6 @@ FVector UColonyStats::SetPosition(FVector NewPosition)
 	return Position;
 }
 
-float UColonyStats::GetLevel()
-{
-	return Level;
-}
-
-float UColonyStats::SetLevel(float NewLevel)
-{
-	Level = NewLevel;
-	return Level;
-}
-
 float UColonyStats::GetBaseOutput()
 {
 	return BaseOutput;
@@ -87,17 +76,6 @@ float UColonyStats::SetValue(float NewValue)
 {
 	Value = NewValue;
 	return Value;
-}
-
-FVector UColonyStats::GetSize()
-{
-	return Size;
-}
-
-FVector UColonyStats::SetSize(FVector NewSize)
-{
-	Size = NewSize;
-	return Size;
 }
 
 int UColonyStats::GetItemCount()
